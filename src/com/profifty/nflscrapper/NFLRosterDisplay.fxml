@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profifty.nflscrapper.NFLRosterScrapperController">
+   <children>
+      <Label id="labelRoster" fx:id="labelRoster" layoutX="158.0" layoutY="14.0" prefHeight="43.0" prefWidth="570.0" text="NFL Roster Data Display Application">
+         <font>
+            <Font name="Arial Bold" size="29.0" />
+         </font>
+      </Label>
+      <ImageView id="imageView" fx:id="teamLogo" fitHeight="69.0" fitWidth="92.0" layoutX="20.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
+      <TableView id="tableId" fx:id="tableId" layoutX="158.0" layoutY="66.0" prefHeight="295.0" prefWidth="613.0">
+        <columns>
+          <TableColumn id="tableCol1Number" fx:id="tableCol1Number" prefWidth="29.0" text="#" />
+          <TableColumn id="tableColName" fx:id="tableColName" prefWidth="130.0" text="Name" />
+            <TableColumn id="tableColPos" fx:id="tableColPos" prefWidth="66.0" text="Position" />
+            <TableColumn id="tableColHt" fx:id="tableColHt" prefWidth="53.0" text="Height" />
+            <TableColumn id="tableColWt" fx:id="tableColWt" prefWidth="70.0" text="Weight" />
+            <TableColumn id="tableColAge" fx:id="tableColAge" prefWidth="44.0" text="Age" />
+            <TableColumn id="tableColEx" fx:id="tableColEx" prefWidth="81.0" text="Experience" />
+            <TableColumn id="tableColCollege" fx:id="tableColCollege" prefWidth="139.0" text="College" />
+        </columns>
+      </TableView>
+      <ImageView id="nflLogoId" fx:id="nflLogoId" fitHeight="91.0" fitWidth="92.0" layoutX="26.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@nfltrans.png" />
+         </image>
+      </ImageView>
+      <Button id="grabTeamInfoId" fx:id="grabTeamInfoId" layoutX="381.0" layoutY="403.0" mnemonicParsing="false" onAction="#getTeamRosterInfo" prefHeight="52.0" prefWidth="221.0" text="Press to Grab Team Info.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField id="textFieldTeamEntryId" fx:id="textFieldTeamEntryId" layoutX="158.0" layoutY="402.0" prefHeight="54.0" prefWidth="213.0" promptText="Ex. Chicago">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Label id="enterTeamLabelId" fx:id="enterTeamLabelId" layoutX="158.0" layoutY="369.0" text="Enter Team's Mascot">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="avgAgeLabel" layoutX="33.0" layoutY="252.0" text="Avg. Age">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="avgWeightlabel" layoutX="17.0" layoutY="327.0" text="Avg. Weight">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="syncToDB" layoutX="7.0" layoutY="402.0" mnemonicParsing="false" onAction="#syncToDB" prefHeight="54.0" prefWidth="137.0" text="Sync to DB">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="averageAgeId" layoutX="18.0" layoutY="286.0" prefHeight="34.0" prefWidth="125.0" />
+      <TextField fx:id="avgWeightId" layoutX="17.0" layoutY="360.0" prefHeight="34.0" prefWidth="125.0" />
+      <TextField fx:id="rosterCountId" layoutX="18.0" layoutY="216.0" prefHeight="34.0" prefWidth="125.0" />
+      <Label fx:id="rosterlabel" layoutX="16.0" layoutY="180.0" text="Roster Count">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="SyncAllTeamsId" layoutX="610.0" layoutY="403.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="164.0" text="Sync All Teams">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
